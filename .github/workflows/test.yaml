@@ -16,6 +16,5 @@ jobs:
       - name: Check github actions own runner
         shell: bash
         run: |
-          whoami
-          pwd
-          ls -l
+          free -m
+          df -h
