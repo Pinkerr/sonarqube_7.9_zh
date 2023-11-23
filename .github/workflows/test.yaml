@@ -1,0 +1,21 @@
+name: Test
+
+on:
+  # Trigger analysis when pushing to your main branches, and when creating a pull request.
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+  # pull_request:
+  #     types: [opened, synchronize, reopened]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check github actions own runner
+        shell: bash
+        run: |
+          whoami
+          pwd
+          ls -l
